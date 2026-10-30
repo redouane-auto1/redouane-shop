@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Redouane Shop - اكتشف عروض التسوق في المغرب: الإلكترونيات، المنزل، الملابس، الجمال، السيارات والمزيد.">
+  <title>Redouane Shop | التسوق في المغرب</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#f5f6fa;color:#18202c}
+    header{background:#111827;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .logo{font-size:25px;font-weight:bold;color:#fbbf24}
+    button,a{cursor:pointer}
+    .lang{background:#374151;color:white;border:0;padding:10px 15px;border-radius:8px}
+    .hero{padding:55px 18px;text-align:center;background:linear-gradient(135deg,#172554,#111827);color:white}
+    .hero h1{font-size:34px;margin:0 0 14px}
+    .hero p{font-size:17px;line-height:1.8;color:#e5e7eb}
+    .shop-btn{display:inline-block;background:#fbbf24;color:#111827;text-decoration:none;font-weight:bold;padding:14px 25px;border-radius:9px;margin-top:15px}
+    main{max-width:1100px;margin:auto;padding:25px 16px}
+    .search{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;font-size:16px;margin-bottom:25px}
+    h2{margin:20px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:15px}
+    .card{background:white;padding:22px 12px;text-align:center;border-radius:14px;box-shadow:0 3px 12px #0000000d}
+    .emoji{font-size:38px}
+    .card h3{font-size:17px;margin:12px 0}
+    .card p{font-size:13px;color:#687386;line-height:1.6}
+    .card a{display:inline-block;background:#111827;color:white;text-decoration:none;padding:10px 13px;border-radius:8px;font-size:14px}
+    .notice{background:#fff7df;border:1px solid #f5d77b;padding:15px;border-radius:10px;line-height:1.8;margin-top:28px;font-size:14px}
+    footer{background:#111827;color:#ddd;text-align:center;padding:25px 15px;line-height:2;margin-top:35px}
+    footer a{color:#fbbf24}
+    [hidden]{display:none!important}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🛍️ Redouane Shop</div>
+  <button class="lang" onclick="toggleLang()">Français / العربية</button>
+</header>
+
+<section class="hero">
+  <h1 id="title">مرحباً بك في Redouane Shop 🇲🇦</h1>
+  <p id="subtitle">اكتشف عروض التسوق والمنتجات التي تناسب حياتك اليومية</p>
+  <a class="shop-btn" href="https://jforce.jumia.ma/s/yUWhKj4"
+     target="_blank" rel="noopener sponsored" id="heroBtn">اكتشف عروض جوميا</a>
+</section>
+
+<main>
+  <input class="search" id="search" type="search"
+    placeholder="ابحث عن قسم..." oninput="filterCards()">
+
+  <h2 id="heading">تسوق حسب الأقسام</h2>
+
+  <div class="grid" id="categories">
+
+    <article class="card" data-ar="الإلكترونيات" data-fr="Électronique">
+      <div class="emoji">📱</div>
+      <h3 class="ar">الإلكترونيات</h3><h3 class="fr" hidden>Électronique</h3>
+      <p class="ar">هواتف وإكسسوارات وأجهزة</p><p class="fr" hidden>Mobiles et accessoires</p>
+      <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">تسوق الآن</a>
+    </article>
+
+    <article class="card" data-ar="المنزل" data-fr="Maison">
+      <div class="emoji">🏠</div>
+      <h3 class="ar">المنزل</h3><h3 class="fr" hidden>Maison</h3>
+      <p class="ar">أدوات وأثاث ومستلزمات</p><p class="fr" hidden>Maison et décoration</p>
+      <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">تسوق الآن</a>
+    </article>
+
+    <article class="card" data-ar="الملابس" data-fr="Mode">
+      <div class="emoji">👕</div>
+      <h3 class="ar">الملابس</h3><h3 class="fr" hidden>Mode</h3>
+      <p class="ar">ملابس وأحذية وإكسسوارات</p><p class="fr" hidden>Vêtements et chaussures</p>
+      <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">تسوق الآن</a>
+    </article>
+
+    <article class="card" data-ar="الجمال" data-fr="Beauté">
+      <div class="emoji">💄</div>
+      <h3 class="ar">الجمال</h3><h3 class="fr" hidden>Beauté</h3>
+      <p class="ar">العناية والجمال</p><p class="fr" hidden>Beauté et soins</p>
+      <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">تسوق الآن</a>
+    </article>
+
+    <article class="card" data-ar="السيارات" data-fr="Auto">
+      <div class="emoji">🚗</div>
+      <h3 class="ar">السيارات</h3><h3 class="fr" hidden>Auto</h3>
+      <p class="ar">إكسسوارات ومستلزمات السيارات</p><p class="fr" hidden>Accessoires automobiles</p>
+      <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">تسوق الآن</a>
+    </article>
+
+    <article class="card" data-ar="الأطفال" data-fr="Enfants">
+      <div class="emoji">🧸</div>
+      <h3 class="ar">الأطفال</h3><h3 class="fr" hidden>Enfants</h3>
+      <p class="ar">ألعاب ومستلزمات الأطفال</p><p class="fr" hidden>Jouets et accessoires</p>
+      <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">تسوق الآن</a>
+    </article>
+
+  </div>
+
+  <div class="notice">
+    <strong id="noticeTitle">ملاحظة للزوار:</strong>
+    <span id="noticeText">بعض روابط التسوق في هذا الموقع روابط إحالة. قد نحصل على عمولة إذا تم الشراء عبرها، دون تكلفة إضافية عليك.</span>
+  </div>
+</main>
+
+<footer>
+  <strong>Redouane Shop 🇲🇦</strong><br>
+  <span id="footerText">متجرك لاكتشاف عروض التسوق في المغرب</span><br>
+  <a href="https://jforce.jumia.ma/s/yUWhKj4" target="_blank" rel="noopener sponsored">Jumia Maroc</a>
+  <p>© <span id="year"></span> Redouane Shop</p>
+</footer>
+
+<script>
+let french = false;
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function toggleLang(){
+  french = !french;
+  document.documentElement.lang = french ? "fr" : "ar";
+  document.documentElement.dir = french ? "ltr" : "rtl";
+
+  document.getElementById("title").textContent =
+    french ? "Bienvenue chez Redouane Shop 🇲🇦" : "مرحباً بك في Redouane Shop 🇲🇦";
+  document.getElementById("subtitle").textContent =
+    french ? "Découvrez des offres et des produits pour votre quotidien" : "اكتشف عروض التسوق والمنتجات التي تناسب حياتك اليومية";
+  document.getElementById("heroBtn").textContent =
+    french ? "Découvrir les offres Jumia" : "اكتشف عروض جوميا";
+  document.getElementById("heading").textContent =
+    french ? "Acheter par catégorie" : "تسوق حسب الأقسام";
+  document.getElementById("search").placeholder =
+    french ? "Rechercher une catégorie..." : "ابحث عن قسم...";
+  document.getElementById("noticeTitle").textContent =
+    french ? "Information :" : "ملاحظة للزوار:";
+  document.getElementById("noticeText").textContent =
+    french ? "Certains liens sont des liens affiliés. Nous pouvons recevoir une commission sur les achats éligibles, sans coût supplémentaire pour vous." : "بعض روابط التسوق في هذا الموقع روابط إحالة. قد نحصل على عمولة إذا تم الشراء عبرها، دون تكلفة إضافية عليك.";
+  document.getElementById("footerText").textContent =
+    french ? "Votre boutique pour découvrir les offres au Maroc" : "متجرك لاكتشاف عروض التسوق في المغرب";
+
+  document.querySelectorAll(".ar").forEach(e=>e.hidden=french);
+  document.querySelectorAll(".fr").forEach(e=>e.hidden=!french);
+  document.querySelectorAll(".card a").forEach(e=>e.textContent=french?"Voir les offres":"تسوق الآن");
+  filterCards();
+}
+
+function filterCards(){
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  document.querySelectorAll(".card").forEach(card=>{
+    const name = french ? card.dataset.fr : card.dataset.ar;
+    card.hidden = !name.toLowerCase().includes(q);
+  });
+}
+</script>
+</body>
+</html>
